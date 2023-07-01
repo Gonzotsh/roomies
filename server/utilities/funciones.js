@@ -80,22 +80,22 @@ export async function putGastosHandler(req, res) {
         fs.readFile('db/data.json', (err, json) => {
             res.writeHead(200, { 'Content-type': 'application/json' })
 
-            fs.readFile('db/roomates.json', (err, json) => {
-                res.writeHead(200, { 'Content-type': 'application/json' })
-                err ? console.log('Noooooooooo!!!! problemas') : console.log('Gasto editado con exito')
+            // fs.readFile('db/roomates.json', (err, json) => {
+            //     res.writeHead(200, { 'Content-type': 'application/json' })
+            //     err ? console.log('Noooooooooo!!!! problemas') : console.log('Gasto editado con exito')
 
-                let saldos = users;
-                saldos.map((d) => {
-                    if (d.nombre == roomie) {
-                        d.saldo = 5990
-                        return d
-                    }
-                    return d
-                })
-                fs.writeFileSync('db/roomates.json', JSON.stringify(saldos));
+            //     let saldos = users;
+            //     saldos.map((d) => {
+            //         if (d.nombre == roomie) {
+            //             d.saldo = 5990
+            //             return d
+            //         }
+            //         return d
+            //     })
+            //     fs.writeFileSync('db/roomates.json', JSON.stringify(saldos));
 
-                res.end(json)
-            })
+            //     res.end(json)
+            // })
 
             err ? console.log('Noooooooooo!!!! problemas') : console.log('Gasto editado con exito')
 
